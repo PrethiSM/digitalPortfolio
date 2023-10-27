@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="headercontent"> 
+        <img src="prethi.jpg" alt="Your Profile Picture" class="Profile Picture">
+        <h1>Prethi Senthilkumar</h1>
+    </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#proskill">Professional skills</a></li>
+            <li><a href="#perskill">Personal skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <div class="section-content">
+            <h3>About Me</h3>
+            <p>Hello Everyone! This is Prethi SM and I am a final year Computer Science Student.</p>
+        </div>
+    </section>
+    <section id="education">
+        <div class="section-content">
+            <h3>B.Sc.Computer Science</h3>
+            <p>Bharathiyar University</p>
+        </div>
+    </section>
+    <section id="proskill">
+        <div class="section-content">
+            <h3>Professional skills</h3>
+            <ul type="square">
+                <li>C & C++</li>
+                <li>python</li>
+                <li>Data Science</li>
+                <li>Blockchain Technology</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </div> 
+    </section>
+    <section id="perskill">
+        <div class="section-content">
+            <h2>Personal skills</h2>
+            <ul type="square">
+                <li>Communication skills</li>
+                <li>Leadership</li>
+                <li>Focussed</li>
+            </ul>
+        </div>
+    </section>
+    <section id="resume">
+        <centre>
+            <div class=""section-content">
+            <h2>Resume</h2>
+        <a href="c:\Users\ELCOT\Downloads\Prethi Resume.pdf" class="download-button">Download CV</a>
+    </div>
+        </centre>
+    </section>
+    <footer>
+            <p>&copy;Prethi SM 2023</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+            anchor.addEventListener('click',function(e) {
+                e.preventDefault();
+
+                const targetID = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top:targetElement.offsetLeft,
+                        behavior:'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
